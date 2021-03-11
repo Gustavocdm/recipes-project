@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'shopping',
     loadChildren: () => import('./modules/shopping/shopping.module').then(m => m.ShoppingModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'recipes'
   }
 ];
 
